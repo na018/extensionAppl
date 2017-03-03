@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.'/MyDatabaseException.php';
 
 
 class DB extends PDO {
@@ -18,7 +19,8 @@ class DB extends PDO {
      */
     public function __destruct()
    {
-       echo'I do not know how to write the destructor here...';
+      // parent::__destruct();
+       //echo'I do not know how to write the destructor here...';
    }
 
     /**

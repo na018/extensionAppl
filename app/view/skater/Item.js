@@ -38,24 +38,22 @@ Ext.define('sencha2.view.skater.Item', {
                         submitFormat: 'Y-m-d',
                         name: 'birthday',
                         format: 'd.m.Y'
-                    },  {
+                    }, {
                         xtype: 'textfield',
-                        fieldLabel: 'coach',
+                        fieldLabel: 'Coach',
                         anchor: '100%',
-                        name: 'name'
+                        name: 'coach'
                     }, {
                         xtype: 'textfield',
                         fieldLabel: 'image',
                         anchor: '100%',
-                        name: 'name'
+                        name: 'image'
                     }, {
                         xtype: 'htmleditor',
                         fieldLabel: 'info',
                         anchor: '100%',
-                        name: 'name'
-                    }
-
-                    ]
+                        name: 'info'
+                    }]
                 }],
 
                 dockedItems: [
@@ -69,7 +67,7 @@ Ext.define('sencha2.view.skater.Item', {
 
                         items: [{
                             xtype: 'button',
-                            text: 'Speichern',
+                            text: 'Speichern2',
                             scale: 'medium',
                             handler: function (button) {
                                 button.up('window').down('form').getForm().submit({
@@ -78,8 +76,9 @@ Ext.define('sencha2.view.skater.Item', {
                                         Ext.getStore('SkaterStore').load();
                                         button.up('window').close();
                                     },
-                                    failure: function (response) {
-                                        Ext.Msg.alert('Fehler', 'Irgendwas hat nicht funktioniert');
+                                    failure: function (form, action) {
+                                        action.result.errorMessage = 'Something went wrong';
+                                        Ext.Msg.alert("Load failed", action.result.errorMessage);
                                     }
                                 });
                             }
