@@ -13,10 +13,13 @@ class DB extends PDO {
     }
 
 
-    public function disconnect()
-    {
-
-    }
+    /**
+     *
+     */
+    public function __destruct()
+   {
+       echo'I do not know how to write the destructor here...';
+   }
 
     /**
      * @param $query
@@ -30,29 +33,30 @@ class DB extends PDO {
         try {
             $stmt = $this->prepare($query);
             $stmt->execute($param);
-            return $stmt->fetch();
+            //fetch(PDO::FETCH_NUM, PDO::FETCH_ORI_PRIOR);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             throw new MyDatabaseException($e->getMessage(), $e->getCode());
         }
     }
 
-    public function getRows($query, array $params)
+    public function getRows($query, array $params=[])
     {
         try {
             $stmt = $this->prepare($query);
             $stmt->execute($params);
-            return $stmt->fetchAll();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             throw new MyDatabaseException($e->getMessage(), $e->getCode());
         }
     }
 
-    public function insertRow($query, array $params)
+    public function insertRow($query, array $params=[])
     {
         try {
             $stmt = $this->prepare($query);
             $stmt->execute($params);
-            return $stmt->fetchAll();
+            return TRUE;
         } catch (PDOException $e) {
             throw new MyDatabaseException($e->getMessage(), $e->getCode());
         }
