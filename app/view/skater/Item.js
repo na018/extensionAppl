@@ -1,0 +1,134 @@
+Ext.define('sencha2.view.skater.Item', {
+    extend: 'Ext.grid.Panel',
+
+    requires: [
+        'sencha2.store.SkaterStore',
+        'sencha2.view.skater.ItemController',
+        'sencha2.view.skater.ItemModel',
+        'Ext.grid.column.Date'
+    ],
+
+    xtype: 'sencha2-ItemView',
+    controller: 'skater-item',
+    title: 'Item Panel',
+    tbar: [{
+        xtype: 'button',
+        text: 'Neuen Skater anlegen',
+        handler: function (button) {
+            Ext.create('Ext.window.Window', {
+                title: 'Neuen Skater anlegen',
+                modal: true,
+                layout: 'fit',
+                width: 400,
+                height: 400,
+                items: [{
+                    xtype: 'form',
+                    bodyPadding: 10,
+                    id: 'formular',
+                    layout: 'anchor',
+                    items: [{
+                        xtype: 'textfield',
+                        fieldLabel: 'Name',
+                        anchor: '100%',
+                        name: 'name'
+                    }, {
+                        xtype: 'datefield',
+                        fieldLabel: 'Geburtstag',
+                        anchor: '100%',
+                        submitFormat: 'Y-m-d',
+                        name: 'birthday',
+                        format: 'd.m.Y'
+                    },  {
+                        xtype: 'textfield',
+                        fieldLabel: 'coach',
+                        anchor: '100%',
+                        name: 'name'
+                    }, {
+                        xtype: 'textfield',
+                        fieldLabel: 'image',
+                        anchor: '100%',
+                        name: 'name'
+                    }, {
+                        xtype: 'htmleditor',
+                        fieldLabel: 'info',
+                        anchor: '100%',
+                        name: 'name'
+                    }
+
+                    ]
+                }],
+
+                dockedItems: [
+                    {
+                        dock: 'bottom',
+                        xtype: 'container',
+                        layout: {
+                            type: 'hbox',
+                            pack: 'end'
+                        },
+
+                        items: [{
+                            xtype: 'button',
+                            text: 'Speichern',
+                            scale: 'medium',
+                            handler: function (button) {
+                                button.up('window').down('form').getForm().submit({
+                                    url: 'php/insertSkater.php',
+                                    success: function (response) {
+                                        Ext.getStore('SkaterStore').load();
+                                        button.up('window').close();
+                                    },
+                                    failure: function (response) {
+                                        Ext.Msg.alert('Fehler', 'Irgendwas hat nicht funktioniert');
+                                    }
+                                });
+                            }
+                        }]
+                    }
+                ]
+            }).show();
+        }
+    }],
+    store: 'SkaterStore',
+    viewConfig: {
+        getRowClass: function (record) {
+            if (Ext.Date.format(record.get('birthday'), 'Y') > 2016)
+                return 'rowgreen';
+        }
+    },
+    columns: [{
+        xtype: 'rownumberer'
+    },
+        {
+            text: 'Name',
+            dataIndex: 'name'
+        },
+        {
+            text: 'Birthday',
+            xtype: 'datecolumn',
+            format: 'd.m.Y',
+            dataIndex: 'birthday'
+        },
+        {
+            text: 'Coach',
+            dataIndex: 'coach'
+        },
+        {
+            text: 'Image',
+            dataIndex: 'image',
+            renderer: function (value) {
+                return '<img src="' + value + '" />';
+            }
+        },
+        {
+            text: 'Info',
+            dataIndex: 'info',
+            renderer: function (value, meta) {
+                meta.tdStyle = 'background-color: yellow';
+                return value;
+            }
+        }
+
+    ]
+
+});
