@@ -16,6 +16,6 @@ $db->insertRow(
     [$_POST['name'],
         $_POST['birthday'],
         $_POST['coach'],
-        //$_POST['image']
-        //,$_POST['info']
+        $_POST['image']
+        ,$_POST['info']
     ]);
