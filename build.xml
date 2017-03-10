@@ -22,7 +22,7 @@
             <target name="-before-clean"/>
             <target name="-after-clean"/>
 
-        The general "init" target is used to initialize all other properties, including
+        The connection "init" target is used to initialize all other properties, including
         those provided by Sencha Cmd.
 
             <target name="-before-init"/>

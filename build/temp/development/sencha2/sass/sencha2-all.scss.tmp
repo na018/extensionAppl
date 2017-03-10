@@ -918,18 +918,28 @@ $include-sencha2-controller-skatercontroller: true;
 $include-sencha2-model-skater: true;
 $include-sencha2-model-user: true;
 $include-sencha2-store-skaterstore: true;
+$include-sencha2-util-util: true;
 $include-sencha2-view-foo-thing: true;
 $include-sencha2-view-foo-thingcontroller: true;
 $include-sencha2-view-foo-thingmodel: true;
 $include-sencha2-view-item-foo: true;
 $include-sencha2-view-item-foocontroller: true;
 $include-sencha2-view-item-foomodel: true;
+$include-sencha2-view-login-capslocktooltip: true;
+$include-sencha2-view-login-capslocktooltipcontroller: true;
+$include-sencha2-view-login-capslocktooltipmodel: true;
+$include-sencha2-view-login-login: true;
+$include-sencha2-view-login-logincontroller: true;
+$include-sencha2-view-login-loginmodel: true;
 $include-sencha2-view-main-main: true;
 $include-sencha2-view-main-maincontroller: true;
 $include-sencha2-view-main-mainmodel: true;
 $include-sencha2-view-skater-item: true;
 $include-sencha2-view-skater-itemcontroller: true;
 $include-sencha2-view-skater-itemmodel: true;
+$include-sencha2-view-skater2-skater: true;
+$include-sencha2-view-skater2-skatercontroller: true;
+$include-sencha2-view-skater2-skatermodel: true;
 
 
 /* ======================== ETC ======================== */

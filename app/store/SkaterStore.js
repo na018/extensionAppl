@@ -10,9 +10,9 @@ Ext.define('sencha2.store.SkaterStore',{
     model: 'sencha2.model.Skater',
     proxy: {
         type: 'ajax',
-        url: 'php/getSkater.php',
+        url: 'php/dataBase/getter/getSkater.php',
         reader: 'json'
-    }/*,
+    },/*,
     data:[
         {
             'name':'Jessica Anderson',
@@ -43,4 +43,5 @@ Ext.define('sencha2.store.SkaterStore',{
             'info': 'Winner of the Olympic Als Competition'
         }
     ]*/
+
 });

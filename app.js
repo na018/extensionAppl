@@ -6,40 +6,41 @@
 Ext.application({
     name: 'sencha2',
 
-    views: [
-        'skater.Item',
-        'sencha2.view.item.Foo'
-    ],
-    controllers:[
-        'SkaterController'
-    ],
-    stores:[
-        'SkaterStore'
-    ],
-    launch: function () {
-        Ext.create('Ext.container.Viewport',{
-            layout:{
-                type:'border'
-            },
-            items:[
-                {
-                    xtype: 'sencha2-ItemView',
-                    flex:1,
-                    region: 'center'
-                },
-                {
-                    xtype: 'itemfoo',
-                    flex: 0.5,
-                    region: 'north'
-                }
-            ]
-        });
+    // views: [
+    //     'skater.Item',
+    //     'sencha2.view.item.Foo'
+    // ],
+    // controllers:[
+    //     'SkaterController'
+    // ],
+    // stores:[
+    //     'SkaterStore'
+    // ],
+    // launch: function () {
+    //     Ext.create('Ext.container.Viewport',{
+    //         layout:{
+    //             type:'border'
+    //         },
+    //         items:[
+    //             {
+    //                 xtype: 'sencha2-ItemView',
+    //                 flex:1,
+    //                 region: 'center'
+    //             },
+    //             {
+    //                 xtype: 'itemfoo',
+    //                 flex: 0.5,
+    //                 region: 'north'
+    //             }
+    //         ]
+    //     });
+    //
+    // }
 
-    }
+    extend: 'sencha2.Application',
+    autoCreateViewport: false
+   // autoCreateViewport: 'sencha2.view.skater2.Skater',
 
-   // extend: 'sencha2.Application',
-  //  autoCreateViewport: 'sencha2.view.skater.Item'
-    
     //autoCreateViewport: 'sencha2.view.main.Main'
 	
     //-------------------------------------------------------------------------

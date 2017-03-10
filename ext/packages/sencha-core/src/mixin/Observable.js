@@ -1677,8 +1677,8 @@ Ext.define('Ext.mixin.Observable', function(Observable) {
         /**
          * @method
          * An alias for {@link #addListener}.  In versions prior to 5.1, {@link #listeners}
-         * had a generated setter which could be called to add listeners.  In 5.1 the listeners
-         * config is not processed using the config system and has no generated setter, so
+         * had a generated insert which could be called to add listeners.  In 5.1 the listeners
+         * config is not processed using the config system and has no generated insert, so
          * this method is provided for backward compatibility.  The preferred way of
          * adding listeners is to use the {@link #on} method.
          * @param {Object} listeners The listeners

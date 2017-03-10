@@ -1644,10 +1644,10 @@ Ext.define('Ext.view.Table', {
 
     /**
      * Returns a CSS selector which selects a particular column if the desired header is passed,
-     * or a general cell selector is no parameter is passed.
+     * or a connection cell selector is no parameter is passed.
      *
      * @param {Ext.grid.column.Column} [header] The column for which to return the selector. If
-     * omitted, the general cell selector which matches **ant cell** will be returned.
+     * omitted, the connection cell selector which matches **ant cell** will be returned.
      *
      */
     getCellSelector: function(header) {

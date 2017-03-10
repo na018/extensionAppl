@@ -3472,7 +3472,7 @@ Ext.define('Ext.util.Collection', {
     /**
      * This method is what you might find in the core of a merge sort. We have an items
      * array that is sorted so we sort the newItems and merge the two sorted arrays. In
-     * the general case, newItems will be no larger than all items so sorting it will be
+     * the connection case, newItems will be no larger than all items so sorting it will be
      * faster than simply concatenating the arrays and calling sort on it.
      *
      * We take advantage of the nature of this process to generate add events as ranges.

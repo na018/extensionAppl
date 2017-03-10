@@ -1,14 +1,18 @@
 Ext.define('sencha2.view.skater.Item', {
     extend: 'Ext.grid.Panel',
+    xtype: 'sencha2-ItemView',
 
     requires: [
+        'Ext.button.Button',
+        'Ext.grid.column.Date',
+        'Ext.grid.column.RowNumberer',
+        'Ext.window.Window',
         'sencha2.store.SkaterStore',
         'sencha2.view.skater.ItemController',
-        'sencha2.view.skater.ItemModel',
-        'Ext.grid.column.Date'
+        'sencha2.view.skater.ItemModel'
     ],
 
-    xtype: 'sencha2-ItemView',
+
     controller: 'skater-item',
     title: 'Item Panel',
     tbar: [{
@@ -67,11 +71,11 @@ Ext.define('sencha2.view.skater.Item', {
 
                         items: [{
                             xtype: 'button',
-                            text: 'Speichern2',
+                            text: 'Speichern',
                             scale: 'medium',
                             handler: function (button) {
                                 button.up('window').down('form').getForm().submit({
-                                    url: 'php/insertSkater.php',
+                                    url: 'php/dataBase/insert/insertSkater.php',
                                     success: function (response) {
                                         Ext.getStore('SkaterStore').load();
                                         button.up('window').close();

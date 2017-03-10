@@ -355,7 +355,7 @@ Ext.define('Ext.toolbar.Toolbar', {
             me.addClsWithUI('vertical');
         }
 
-        // @TODO: remove this hack and implement a more general solution
+        // @TODO: remove this hack and implement a more connection solution
         if (me.ui === 'footer') {
             me.ignoreBorderManagement = true;
         }

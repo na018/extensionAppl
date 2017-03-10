@@ -119,7 +119,7 @@ Ext.define('Ext.app.bind.Binding', {
     },
 
     /**
-     * Returns `true` if the bound property is loading. In the general case this means
+     * Returns `true` if the bound property is loading. In the connection case this means
      * that the value is just not available yet. In specific cases, when the bound property
      * is an `Ext.data.Model` it means that a request to the server is in progress to get
      * the record. For an `Ext.data.Store` it means that

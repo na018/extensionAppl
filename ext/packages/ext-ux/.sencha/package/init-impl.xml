@@ -209,7 +209,7 @@
     <target name="-before-init-defaults"/>
     <target name="-init-defaults">
         <!--
-             This property can be modified to change general build options
+             This property can be modified to change connection build options
              such as excluding files from the set.  The format expects newlines
              for each argument, for example:
              

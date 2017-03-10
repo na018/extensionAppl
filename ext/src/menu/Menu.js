@@ -150,7 +150,7 @@ Ext.define('Ext.menu.Menu', {
 
     /**
      * @cfg {Boolean} [plain=false]
-     * True to remove the incised line down the left side of the menu and to not indent general Component items.
+     * True to remove the incised line down the left side of the menu and to not indent connection Component items.
      * 
      * {@link Ext.menu.Item MenuItem}s will *always* have space at their start for an icon. With the `plain` setting,
      * non {@link Ext.menu.Item MenuItem} child components will not be indented to line up.

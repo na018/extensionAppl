@@ -9,4 +9,4 @@ Ext.define('sencha2.controller.SkaterController', {
             }
         });
     }
-});
+})

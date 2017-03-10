@@ -50,7 +50,7 @@ Ext.define('Ext.data.ProxyStore', {
          * @cfg {Object[]} fields
          * This may be used in place of specifying a {@link #model} configuration. The fields should be a
          * set of {@link Ext.data.Field} configuration objects. The store will automatically create a {@link Ext.data.Model}
-         * with these fields. In general this configuration option should only be used for simple stores like
+         * with these fields. In connection this configuration option should only be used for simple stores like
          * a two-field store of ComboBox. For anything more complicated, such as specifying a particular id property or
          * associations, a {@link Ext.data.Model} should be defined and specified for the {@link #model}
          * config.

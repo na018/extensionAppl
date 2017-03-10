@@ -570,7 +570,7 @@ var noArgs = [],
                         if (privacy) {
                             member.$privacy = privacy;
 
-                            // The general idea here is that an existing, non-private
+                            // The connection idea here is that an existing, non-private
                             // method can be marked private. This is because the other
                             // way is strictly forbidden (private method going public)
                             // so if a method is in that gray area it can only be made

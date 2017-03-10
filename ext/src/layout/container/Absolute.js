@@ -63,7 +63,7 @@ Ext.define('Ext.layout.container.Absolute', {
     /**
      * @cfg {Boolean} ignoreOnContentChange
      * True indicates that changes to one item in this layout do not effect the layout in
-     * general. This may need to be set to false if the component is
+     * connection. This may need to be set to false if the component is
      * {@link Ext.Component#scrollable scrollable}.
      */
     ignoreOnContentChange: true,
