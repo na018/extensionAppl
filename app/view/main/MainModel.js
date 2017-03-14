@@ -1,14 +1,13 @@
-/**
- * This class is the view model for the Main view of the application.
- */
 Ext.define('sencha2.view.main.MainModel', {
     extend: 'Ext.app.ViewModel',
 
-    alias: 'viewmodel.main',
+    alias: 'viewmodel.main',        // viewmodel + type you want to assign
 
     data: {
-        name: 'sencha2'
+        name: 'sencha2',
+        appName: 'DVD Rental Store',
+        appHeaderIcon: '<span class="fa fa-desktop fa-lg app-header-logo">',
+        footer: 'Mastering ExtJS book - Loiane Groner - http://packtpub.com'
     }
 
-    //TODO - add data, formulas and/or methods to support your view
 });

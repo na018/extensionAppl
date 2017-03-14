@@ -2686,16 +2686,13 @@ body#ext-element-1 {
   background-color: blue;
   box-shadow: inset 0 0 50px black;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
 }
-/* line 15, ../../sass/etc/all.scss */
+/* line 14, ../../sass/etc/all.scss */
 body .splashscreen.x-mask {
   background-color: white;
   opacity: 1;
 }
-/* line 19, ../../sass/etc/all.scss */
+/* line 18, ../../sass/etc/all.scss */
 body .splashscreen.x-mask-msg, body .splashscreen.x-mask-msg div {
   font-size: 16px;
   font-weight: bold;
@@ -2704,11 +2701,11 @@ body .splashscreen.x-mask-msg, body .splashscreen.x-mask-msg div {
   background-color: transparent;
   background-position: top center;
 }
-/* line 31, ../../sass/etc/all.scss */
+/* line 30, ../../sass/etc/all.scss */
 body .x-message-box .x-window-body .x-box-inner {
   min-height: 610px !important;
 }
-/* line 34, ../../sass/etc/all.scss */
+/* line 33, ../../sass/etc/all.scss */
 body .x-splash-icon {
   background-image: url("../../resources/images/app/Girls-Blue-Dress-icon.png");
   height: 500px;
@@ -2717,12 +2714,12 @@ body .x-splash-icon {
   margin-left: -300px;
 }
 
-/* line 46, ../../sass/etc/all.scss */
+/* line 45, ../../sass/etc/all.scss */
 .appBanner {
   color: white;
 }
 
-/* line 49, ../../sass/etc/all.scss */
+/* line 48, ../../sass/etc/all.scss */
 .rowgreen {
   background-color: green;
 }

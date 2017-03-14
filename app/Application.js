@@ -1,8 +1,17 @@
-/**
- * The main application class. An instance of this class is created by app.js when it calls
- * Ext.application(). This is the ideal place to handle application launch and initialization
- * details.
- */
+function loadLocale(){
+    var extJsFile = Ext.util.Format.format("ext/packages/ext-locale/build/ext-locale-{0}.js", lang);
+    Ext.Loader.loadScript({url: extJsFile});
+
+    var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en',
+        file = Ext.util.Format.format("resources/locale/{0}.js", lang);
+
+    Ext.Loader.loadScript({url: file, onError: function(){
+        alert('Error loading locale file. Please contact system administrator.');
+    }});
+}
+
+loadLocale();
+
 Ext.define('sencha2.Application', {
     extend: 'Ext.app.Application',
 
@@ -33,38 +42,38 @@ Ext.define('sencha2.Application', {
         var me = this;
         Ext.tip.QuickTipManager.init();     //alternative:  enableQuickTips: true
 
-        var task = new Ext.util.DelayedTask(function() {
+        var task = new Ext.util.DelayedTask(function () {
 
             //Fade out the body mask
             me.splashscreen.fadeOut({
                 duration: 1000,
-                remove:true
+                remove: true
             });
 
             //Fade out the icon and message
             me.splashscreen.next().fadeOut({
                 duration: 1000,
-                remove:true,
+                remove: true,
                 listeners: {
-                    afteranimate: function(el, startTime, eOpts ){
-                      Ext.widget('login-dialog');
-             /*               Ext.create('Ext.container.Viewport',{
-                                layout:{
-                                    type:'border'
-                                },
-                                items:[
-                                    {
-                                        xtype: 'sencha2-ItemView',
-                                        flex:1,
-                                        region: 'center'
-                                    },
-                                    {
-                                        xtype: 'itemfoo',
-                                        flex: 0.5,
-                                        region: 'north'
-                                    }
-                                ]
-                            });*/
+                    afteranimate: function (el, startTime, eOpts) {
+                        Ext.widget('login-dialog');
+                        /*               Ext.create('Ext.container.Viewport',{
+                         layout:{
+                         type:'border'
+                         },
+                         items:[
+                         {
+                         xtype: 'sencha2-ItemView',
+                         flex:1,
+                         region: 'center'
+                         },
+                         {
+                         xtype: 'itemfoo',
+                         flex: 0.5,
+                         region: 'north'
+                         }
+                         ]
+                         });*/
                     }
                 }
             });
@@ -83,6 +92,6 @@ Ext.define('sencha2.Application', {
             cls: 'x-splash-icon'
         });
 
-    },
+    }
 
 });

@@ -6,8 +6,14 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('sencha2.view.main.Main', {
-    extend: 'Ext.container.Container',
+    extend: 'Ext.container.Container',          //simplest container in EXT API
+    plugin: 'viewport',
+    // extend: 'Ext.container.Viewport',
     requires: [
+        'Ext.container.Container',
+        'sencha2.view.main.Footer',
+        'sencha2.view.main.Panel',
+        'sencha2.view.main.Header',
         'sencha2.view.main.MainController',
         'sencha2.view.main.MainModel'
     ],
@@ -24,67 +30,19 @@ Ext.define('sencha2.view.main.Main', {
     },
 
     items: [{
-        region: 'north',
-        xtype: 'component',
-        cls: 'appBanner',
-        padding: 10,
-        height: 40,
-        html: 'My Company - My Company Motto'
-    }, {
-        xtype: 'panel',
-        bind: {
-            title: '{name}'
-        },
-        region: 'west',
-        html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li><li>I' + "'" + 'm the west region :D</li></ul>',
-        width: 250,
-        split: true,
-        collapsible: true,
-        collapsed: true,
-        tbar: [{
-            text: 'Button',
-            handler: 'onClickButton'
-        }]
-    }, {
         region: 'center',
-        xtype: 'tabpanel',
-        items: [{
-            title: 'Tab 1',
-            html: '<h2>Content appropriate for the current navigation.</h2>',
-            bodyPadding: 20,
-            iconCls: 'x-fa fa-users'
-        }, {
-            title: 'Tab 2',
-            html: '<h2>Hello World</h2>'
-        }, {
-            title: 'Tab 3',
-            html: '<h2>Lucky Number</h2>'
-        },{
-            title: 'The Data',
-            xtype: 'grid',
-            store: {
-                fields:['name', 'email', 'phone'],
-                data:[
-                    { name: 'Lisa',  email: "lisa@simpsons.com",
-                        phone: "555-111-1224"  },
-                    { name: 'Bart',  email: "bart@simpsons.com",
-                        phone: "555-222-1234" },
-                    { name: 'Homer', email: "home@simpsons.com",
-                        phone: "555-222-1244"  },
-                    { name: 'Marge', email: "marge@simpsons.com",
-                        phone: "555-222-1254"  }
-                ],
-                proxy: {
-                    type: 'memory'
-                }
-            },
-            columns: [
-                { text: 'Name',  dataIndex: 'name' },
-                { text: 'Email', dataIndex: 'email', flex: 1},
-                { text: 'Phone', dataIndex: 'phone' }
-            ]
-        }
-        ]
-    }
-    ]
+        xtype: 'mainpanel'
+    }, {
+        region: 'north',
+        xtpye: 'appheader',
+        html:'<div class="blubb">Text Here</div>'
+    }, {
+        region: 'south',
+        xtype: 'appfooter'
+    }, {
+        region: 'west',
+        xtype: 'container',
+        width: 200,
+        split: true
+    }]
 });

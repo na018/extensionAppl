@@ -14,8 +14,9 @@ Ext.define('sencha2.view.login.Login', {
         'Ext.form.field.Text',
         'Ext.layout.container.Fit',
         'Ext.toolbar.Fill',
-        'sencha2.view.login.LoginController'
+        'sencha2.view.locale.Translation',
 
+        'sencha2.view.login.LoginController'
         // 'sencha2.view.login.LoginModel'
     ],
     controller:'login',
@@ -27,7 +28,7 @@ Ext.define('sencha2.view.login.Login', {
         type: 'fit'
     },
     iconCls: 'fa fa-key fa-lg',
-    title: 'Login',
+    title: 'login'/*translations.login*/,
     closeAction: 'hide',
     closable: false,
     draggable: false,
@@ -52,14 +53,14 @@ Ext.define('sencha2.view.login.Login', {
         items: [
             {
                 name: 'user',
-                fieldLabel: 'User',
+                fieldLabel: 'user'/*translations.user*/,
                 maxLength: 25
             },
             {
                 id:'password',
                 inputType: 'password',
                 name: 'password',
-                fieldLabel: 'Password',
+                fieldLabel: 'password'/*translations.password*/,
                 maxLength: 15,
                 vtype: 'customPass',
                 msTarget: 'side',
@@ -73,29 +74,27 @@ Ext.define('sencha2.view.login.Login', {
         dockedItems: [{
             xtype: 'toolbar',
             dock: 'bottom',
-            items: [
+            items: [{xtype:'translation'},
                 {
                     xtype: 'tbfill'
                 },
                 {
                     xtype: 'button',
                     iconCls: 'fa fa-times fa-lg',
-                    text: 'Cancel',
+                    text: 'cancel'/*translations.cancel*/,
                     listeners: {click:'onButtonClickCancel'}
                 },
                 {
                     xtype: 'button',
                     formBind: true,
                     iconCls: 'fa fa-sign-in fa-lg',
-                    text: 'submit',
+                    text: 'submit'/*translations.submit*/,
                     listeners: {click: 'onButtonClickSubmit'}
                 }
 
             ]
         }]
     }]
-
-
 
     //
     // controller: 'login-login',

@@ -1,0 +1,14 @@
+/* line 1, ../../sass/etc/flagIcons.scss */
+.pt_BR {
+  background-image: url("../../resources/images/app/flags/br.png") !important;
+}
+
+/* line 5, ../../sass/etc/flagIcons.scss */
+.en {
+  background-image: url("../../resources/images/app/flags/us.png") !important;
+}
+
+/* line 9, ../../sass/etc/flagIcons.scss */
+.es {
+  background-image: url("../../resources/images/app/flags/es.png") !important;
+}

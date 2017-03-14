@@ -13,5 +13,9 @@ Ext.define('sencha2.view.item.Foo',{
         type: 'item-foo'
     },
 
-    html: 'Hello, World!!'
+    html: 'Hello, World!!',
+    handler: function () {
+        alert('foo View is called');
+    }
+
 });

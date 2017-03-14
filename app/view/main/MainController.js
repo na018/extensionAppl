@@ -1,28 +1,30 @@
-/**
- * This class is the main view for the application. It is specified in app.js as the
- * "autoCreateViewport" property. That setting automatically applies the "viewport"
- * plugin to promote that instance of this class to the body element.
- *
- * TODO - Replace this content of this view to suite the needs of your application.
- */
 Ext.define('sencha2.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
-        'Ext.window.MessageBox'
+        'sencha2.util.Util'
     ],
 
     alias: 'controller.main',
 
-    onClickButton: function () {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+    onLogout: function(button, e, options){
+        var me=this;
+        Ext.Ajax.request({
+            url: 'php/security/logout.php',
+            scope: me,
+            success: 'onLogoutSuccess',
+            failure: 'onLogoutFailure'
+        });
     },
+    onLogoutSuccess: function(conn,response, options, eOpts){
+        var result=sencha2.util.Util.decodeJSON(conn.responseText);
 
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            Ext.Msg.alert('good Choice','You are sure then.<br>Lucky you :)');
+        if(result.success){
+            this.getView().destroy();
+            window.location.reload();
         }else{
-            Ext.Msg.alert('Why not?','You are unsure?<br>Sorry for that. How may I help you?');
+            sencha2.util.Util.showErrorMsg(result.msg);
         }
-    }
+    },
+    onLogoutFailure: function(conn, response, options, eOpts){    sencha2.util.Util.showErrorMsg(conn.responseText);},
 });

@@ -1,0 +1,12 @@
+/* line 3, ../../../../sass/src/view/main/Header.scss */
+.app-header-logo {
+  color: #2a3f5d;
+}
+
+/* line 7, ../../../../sass/src/view/main/Header.scss */
+.app-header-title {
+  padding: 5px 0 5px 3px;
+  color: #2a3f5d;
+  font-size: 18px;
+  font-weight: bold;
+}
