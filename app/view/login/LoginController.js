@@ -108,8 +108,7 @@ Ext.define('sencha2.view.login.LoginController', {
     onLoginSuccess: function (form, action) {
         this.getView().unmask();
         this.getView().close();
-        Ext.create('sencha2.view.item.Foo');
-        alert('Login sucess.\n I want to create item.Foo');
+        Ext.create('sencha2.view.main.Main');
         sencha2.util.SessionMonitor.start();
     }
 

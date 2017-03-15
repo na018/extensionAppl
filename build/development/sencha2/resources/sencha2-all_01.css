@@ -2282,16 +2282,36 @@
 .fa-meanpath:before {
   content: "\f20c"; }
 
-/* line 5, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
+/* line 1, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/flagIcons.scss */
+.pt_BR {
+  background-image: url("../../resources/images/app/flags/br.png") !important; }
+
+/* line 5, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/flagIcons.scss */
+.en {
+  background-image: url("../../resources/images/app/flags/us.png") !important; }
+
+/* line 9, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/flagIcons.scss */
+.es {
+  background-image: url("../../resources/images/app/flags/es.png") !important; }
+
+/* line 4, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/iconColors.scss */
+.tabIcon {
+  color: #0b67c4; }
+
+/* line 8, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/iconColors.scss */
+.buttonIcon {
+  color: white; }
+
+/* line 7, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
 body#ext-element-1 {
   background-color: blue;
   box-shadow: inset 0 0 50px black;
   box-sizing: border-box; }
-/* line 14, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
+/* line 16, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
 body .splashscreen.x-mask {
   background-color: white;
   opacity: 1; }
-/* line 19, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
+/* line 21, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
 body .splashscreen.x-mask-msg, body .splashscreen.x-mask-msg div {
   font-size: 16px;
   font-weight: bold;
@@ -2299,10 +2319,10 @@ body .splashscreen.x-mask-msg, body .splashscreen.x-mask-msg div {
   border: none;
   background-color: transparent;
   background-position: top center; }
-/* line 30, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
+/* line 32, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
 body .x-message-box .x-window-body .x-box-inner {
   min-height: 610px !important; }
-/* line 33, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
+/* line 35, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
 body .x-splash-icon {
   background-image: url("../../resources/images/app/Girls-Blue-Dress-icon.png");
   height: 500px;
@@ -2310,11 +2330,11 @@ body .x-splash-icon {
   margin-top: -300px;
   margin-left: -300px; }
 
-/* line 45, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
+/* line 47, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
 .appBanner {
   color: white; }
 
-/* line 48, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
+/* line 50, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../sass/etc/all.scss */
 .rowgreen {
   background-color: green; }
 
@@ -25879,27 +25899,3 @@ div.x-datepicker-date:hover {
 .x-datepicker-today {
   border-color: darkred;
   border-style: solid; }
-
-/* line 164, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/picker/Date.scss */
-.x-datepicker-prevday .x-datepicker-date,
-.x-datepicker-nextday .x-datepicker-date {
-  color: #bfbfbf; }
-
-/* line 171, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/picker/Date.scss */
-.x-datepicker-disabled .x-datepicker-date {
-  background-color: #eeeeee;
-  cursor: default;
-  color: gray; }
-
-/* line 179, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/picker/Date.scss */
-.x-datepicker-disabled div.x-datepicker-date:hover {
-  background-color: #eeeeee;
-  color: gray; }
-
-/* line 185, /home/nadin-katrin/public_html/00_projects/sencha/build/temp/development/sencha2/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/picker/Date.scss */
-.x-datepicker-footer,
-.x-monthpicker-buttons {
-  padding: 3px 0;
-  background-image: none;
-  background-color: #f5f5f5;
-  text-align: center; }

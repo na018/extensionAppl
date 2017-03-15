@@ -7,15 +7,16 @@
  */
 Ext.define('sencha2.view.main.Main', {
     extend: 'Ext.container.Container',          //simplest container in EXT API
-    plugin: 'viewport',
-    // extend: 'Ext.container.Viewport',
+    plugins:'viewport',
+
     requires: [
         'Ext.container.Container',
+        'Ext.plugin.Viewport',
         'sencha2.view.main.Footer',
-        'sencha2.view.main.Panel',
         'sencha2.view.main.Header',
         'sencha2.view.main.MainController',
-        'sencha2.view.main.MainModel'
+        'sencha2.view.main.MainModel',
+        'sencha2.view.main.Panel'
     ],
 
     xtype: 'app-main',
@@ -34,8 +35,7 @@ Ext.define('sencha2.view.main.Main', {
         xtype: 'mainpanel'
     }, {
         region: 'north',
-        xtpye: 'appheader',
-        html:'<div class="blubb">Text Here</div>'
+        xtype: 'appheader'
     }, {
         region: 'south',
         xtype: 'appfooter'

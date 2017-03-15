@@ -1,7 +1,9 @@
 
 Ext.define('sencha2.view.item.Foo',{
-    extend: 'Ext.panel.Panel',
+
     xtype: 'itemfoo',
+    extend: 'Ext.container.Viewport',
+
 
     requires: [
         'sencha2.view.item.FooController',

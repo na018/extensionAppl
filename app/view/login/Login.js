@@ -74,7 +74,8 @@ Ext.define('sencha2.view.login.Login', {
         dockedItems: [{
             xtype: 'toolbar',
             dock: 'bottom',
-            items: [{xtype:'translation'},
+            items: [
+                {xtype:'translation'},
                 {
                     xtype: 'tbfill'
                 },
