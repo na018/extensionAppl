@@ -9,18 +9,32 @@ function loadLocale(){
         alert('Error loading locale file. Please contact system administrator.');
     }});
 }
+/*function loadLocale(){
+
+    var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en',
+        //file = Ext.util.Format.format("resources/locale/{0}.js", lang),
+        extJsFile = Ext.util.Format.format("ext/packages/ext-locale/build/ext-locale-{0}.js", lang);
+
+    /!*Ext.Loader.loadScript({url: file, onError: function(){
+     alert('Error loading locale file. Please contact system administrator.');
+     }});*!/
+    Ext.Loader.loadScript({url: extJsFile});
+}*/
 
 loadLocale();
 
 Ext.define('sencha2.Application', {
     extend: 'Ext.app.Application',
 
+    glyphFontFamily: 'FontAwesome',
+
     requires: [
         'Ext.container.Viewport',
         'Ext.dom.Helper',
         'Ext.layout.container.Border',
         'Ext.tip.QuickTipManager',
-        'Ext.util.DelayedTask'
+        'Ext.util.DelayedTask',
+        'sencha2.overrides.tree.ColumnOverride'
     ],
 
     name: 'sencha2',
@@ -31,6 +45,7 @@ Ext.define('sencha2.Application', {
         'login.Login'
     ],
     controllers: [
+        'Menu'
         // 'SkaterController'
     ],
 

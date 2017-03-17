@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: compass.
         on line 4 of ../../../../../ext/packages/ext-theme-base/sass/etc/all.scss
-        from line 959 of sencha2-all.scss
+        from line 1006 of sencha2-all.scss
 
 1: $app-name:   'sencha2' !default;
 2: $image-search-path: '/home/nadin-katrin/public_html/00_projects/sencha/build/development/sencha2/resources';
@@ -15,7 +15,7 @@ Error: File to import not found or unreadable: compass.
 
 Backtrace:
 ../../../../../ext/packages/ext-theme-base/sass/etc/all.scss:4
-sencha2-all.scss:959
+sencha2-all.scss:1006
 /var/lib/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /var/lib/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
 /var/lib/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -71,4 +71,4 @@ sencha2-all.scss:959
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: compass.\A         on line 4 of ../../../../../ext/packages/ext-theme-base/sass/etc/all.scss\A         from line 959 of sencha2-all.scss\A \A 1: $app-name:   'sencha2' !default;\A 2: $image-search-path: '/home/nadin-katrin/public_html/00_projects/sencha/build/development/sencha2/resources';\A 3: $theme-name:   'ext-theme-crisp' !default;\A 4: $include-ext-abstractcomponent: true;\A 5: $include-ext-abstractcontainer: true;\A 6: $include-ext-abstractmanager: true;\A 7: $include-ext-abstractplugin: true;\A 8: $include-ext-abstractselectionmodel: true;\A 9: $include-ext-action: true;"; }
+  content: "Error: File to import not found or unreadable: compass.\A         on line 4 of ../../../../../ext/packages/ext-theme-base/sass/etc/all.scss\A         from line 1006 of sencha2-all.scss\A \A 1: $app-name:   'sencha2' !default;\A 2: $image-search-path: '/home/nadin-katrin/public_html/00_projects/sencha/build/development/sencha2/resources';\A 3: $theme-name:   'ext-theme-crisp' !default;\A 4: $include-ext-abstractcomponent: true;\A 5: $include-ext-abstractcontainer: true;\A 6: $include-ext-abstractmanager: true;\A 7: $include-ext-abstractplugin: true;\A 8: $include-ext-abstractselectionmodel: true;\A 9: $include-ext-action: true;"; }

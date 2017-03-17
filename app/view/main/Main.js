@@ -40,9 +40,10 @@ Ext.define('sencha2.view.main.Main', {
         region: 'south',
         xtype: 'appfooter'
     }, {
-        region: 'west',
-        xtype: 'container',
+        xtype:'mainmenu',
+        region: 'west'
+        /*xtype: 'container',
         width: 200,
-        split: true
+        split: true*/
     }]
 });

@@ -23,7 +23,7 @@ Ext.define('sencha2.view.login.Login', {
 
     autoShow: true,
     height: 370,
-    width: 260,
+    width: 360,
     layout: {
         type: 'fit'
     },

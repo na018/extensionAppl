@@ -34,7 +34,7 @@
    *      ]
    */
   "requires": [
-    "locale"
+    "ext-locale"
   ],
   /**
    * Sass configuration properties.
