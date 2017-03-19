@@ -9,10 +9,10 @@ Ext.define('sencha2.view.menu.Accordion', {
     width: 250,
     layout: {
         type: 'accordion',
-        multi: true
+        multi: true     //all modules are expanded --> comment this line & only the first module should be expanded at a time
     },
     collapsible: true,
     split: true,
     iconCls: 'fa fa-sitemap fa-lg',
-    title: 'Menu'
+    title: 'Menu'  /*translations.menu */
 });

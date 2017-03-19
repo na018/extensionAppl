@@ -3,6 +3,7 @@
  * needed for your application, but these edits will have to be merged by
  * Sencha Cmd when upgrading.
  */
+console.log('app.js');
 Ext.application({
     name: 'sencha2',
 

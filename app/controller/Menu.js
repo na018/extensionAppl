@@ -47,7 +47,7 @@ Ext.define('sencha2.controller.Menu', {
                     item = treeNodeStore.getAt(i);
 
                     nodes.push({
-                        text: item.get('text'), /*translations[item.get('text')],*/
+                        text: translations[item.get('text')],
                         leaf: true,
                         glyph: item.get('iconCls'),
                         id: item.get('id'),

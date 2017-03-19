@@ -76,8 +76,6 @@ function retrieveMenuOptions($modules, $permissions)
 
         $sqlQuery = "SELECT * FROM menu WHERE menu_id = ? AND id IN ($placeholders)";
 
-        $moduleId = $module['id'];
-
         array_unshift($permissions, $module['id']);
 
         $resultDb = $db->getRows($sqlQuery, $permissions);

@@ -32,4 +32,8 @@ translations = {
     films: 'Films',
     reports: 'Reports',
     salesfilmcategory: 'Sales by Film Category'
-};
+};console.log('en translations called');
+
+function getTranslation() {
+    return translations;
+}

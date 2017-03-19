@@ -1,14 +1,18 @@
+console.log('Application.js');
 function loadLocale(){
-    var extJsFile = Ext.util.Format.format("ext/packages/ext-locale/build/ext-locale-{0}.js", lang);
+  /*  var extJsFile = Ext.util.Format.format("ext/packages/ext-locale/build/ext-locale-{0}.js", lang);
     Ext.Loader.loadScript({url: extJsFile});
+    console.log(extJsFile);*/
 
     var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en',
-        file = Ext.util.Format.format("resources/locale/{0}.js", lang);
-
+        file = Ext.util.Format.format("/resources/locale/{0}.js", lang);
+    console.log(file);
     Ext.Loader.loadScript({url: file, onError: function(){
         alert('Error loading locale file. Please contact system administrator.');
     }});
+
 }
+loadLocale();
 /*function loadLocale(){
 
     var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en',
@@ -21,7 +25,7 @@ function loadLocale(){
     Ext.Loader.loadScript({url: extJsFile});
 }*/
 
-loadLocale();
+
 
 Ext.define('sencha2.Application', {
     extend: 'Ext.app.Application',
@@ -54,6 +58,7 @@ Ext.define('sencha2.Application', {
     ],
 
     launch: function () {
+        loadLocale();
         var me = this;
         Ext.tip.QuickTipManager.init();     //alternative:  enableQuickTips: true
 
@@ -97,6 +102,7 @@ Ext.define('sencha2.Application', {
         task.delay(2000);
     },
     init: function () {
+        loadLocale();
         console.log('init');
         var me = this;
         me.splashscreen = Ext.getBody().mask(

@@ -1,5 +1,5 @@
 Ext.define('sencha2.view.locale.Translation', {
-    extend: 'Ext.button.Split',
+    extend: 'Ext.button.Split',         //provides Drop-down Menu
     xtype: 'translation',
 
     requires: [

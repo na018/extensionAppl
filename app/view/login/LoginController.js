@@ -6,7 +6,6 @@ Ext.define('sencha2.view.login.LoginController', {
         'Ext.form.action.Action',
         'sencha2.util.SessionMonitor',
         'sencha2.util.Util',
-        'sencha2.view.item.Foo',
         'sencha2.view.login.CapsLockTooltip',
         'sencha2.view.main.Main'
     ],
@@ -35,18 +34,25 @@ Ext.define('sencha2.view.login.LoginController', {
     onTextFieldSpecialKey: function (field, e, options) {
         if(e.getKey()===e.ENTER){
             this.doLogin();
+            console.log('enter pressed');
         }
+        console.log('key pressed');
     },
     onTextFieldKeyPress: function(field, e, options){
 
+        console.log('onTextFieldKeyPress');
+
         var charCode = e.getCharCode(),
             me = this;
+        if(e.getKey()===e.ENTER){
+            this.doLogin();
+        }
 
-        if((e.shiftKey && charCode >= 97 && charCode <= 122) || //#2
+        if((e.shiftKey && charCode >= 97 && charCode <= 122) ||
             (!e.shiftKey && charCode >= 65 && charCode <= 90)){
 
-            if(me.capslockTooltip === undefined){                 //#3
-                me.capslockTooltip = Ext.widget('capslocktooltip'); //#4
+            if(me.capslockTooltip === undefined){
+                me.capslockTooltip = Ext.widget('capslocktooltip');
             }
 
             me.capslockTooltip.show(); //#5

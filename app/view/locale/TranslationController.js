@@ -6,6 +6,7 @@ Ext.define('sencha2.view.locale.TranslationController', {
     init: function () {
         var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en',
             button = this.getView();
+        console.log(localStorage.getItem('user-lang') );
         button.setIconCls(lang);
         if (lang == 'en') {
             button.setText('English');
@@ -21,6 +22,7 @@ Ext.define('sencha2.view.locale.TranslationController', {
         menu.setIconCls(item.iconCls);
         menu.setText(item.text);
         localStorage.setItem("user-lang", item.iconCls);
+        console.log(item.iconCls);
 
         window.location.reload();
     }

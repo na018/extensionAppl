@@ -16,7 +16,8 @@ Ext.define('sencha2.view.main.Main', {
         'sencha2.view.main.Header',
         'sencha2.view.main.MainController',
         'sencha2.view.main.MainModel',
-        'sencha2.view.main.Panel'
+        'sencha2.view.main.Panel',
+        'sencha2.view.menu.Accordion'
     ],
 
     xtype: 'app-main',

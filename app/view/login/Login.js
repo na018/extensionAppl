@@ -1,3 +1,6 @@
+var translations={login:'login',password:'password'};
+loadLocale();
+
 Ext.define('sencha2.view.login.Login', {
     extend: 'Ext.window.Window',
     xtype: 'login-dialog',      // alias: 'widget.login-dialog'   --> same result  (own preference)     -->returns Reference to component
@@ -9,12 +12,12 @@ Ext.define('sencha2.view.login.Login', {
 
 
     requires: [
+        'sencha2.view.locale.Translation',
         'Ext.button.Button',
         'Ext.form.Panel',
         'Ext.form.field.Text',
         'Ext.layout.container.Fit',
         'Ext.toolbar.Fill',
-        'sencha2.view.locale.Translation',
 
         'sencha2.view.login.LoginController'
         // 'sencha2.view.login.LoginModel'
@@ -28,7 +31,7 @@ Ext.define('sencha2.view.login.Login', {
         type: 'fit'
     },
     iconCls: 'fa fa-key fa-lg',
-    title: 'login'/*translations.login*/,
+    title: translations['login'],
     closeAction: 'hide',
     closable: false,
     draggable: false,
@@ -60,7 +63,7 @@ Ext.define('sencha2.view.login.Login', {
                 id:'password',
                 inputType: 'password',
                 name: 'password',
-                fieldLabel: 'password'/*translations.password*/,
+                fieldLabel: translations['password'],
                 maxLength: 15,
                 vtype: 'customPass',
                 msTarget: 'side',
