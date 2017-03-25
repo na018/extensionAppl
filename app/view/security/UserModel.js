@@ -11,6 +11,7 @@ Ext.define('sencha2.view.security.UserModel', {
         users: {
             model: 'sencha2.model.security.User',
             autoLoad: true
-        }
+        },
+        groups:{model:'sencha2.model.security.Group',autoLoad:true}
     }
 });

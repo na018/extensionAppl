@@ -1,4 +1,3 @@
-
 Ext.define('sencha2.util.Util',{
   statics :{
       decodeJSON: function (text){
@@ -18,5 +17,6 @@ Ext.define('sencha2.util.Util',{
               buttons: Ext.Msg.OK
           });
       }
-  }
+  },
+    required: '<span style="color:red;font-weight:bold" data-qtip="Required"> *</span>',
 });

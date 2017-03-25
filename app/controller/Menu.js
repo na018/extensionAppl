@@ -1,3 +1,6 @@
+translations={    menu1 : 'Security',
+    menu11 : 'Groups and Permissions',
+    menu12 : 'Users',}
 Ext.define('sencha2.controller.Menu', {
     extend: 'Ext.app.Controller',
 

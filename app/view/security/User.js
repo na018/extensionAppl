@@ -15,7 +15,11 @@ Ext.define('sencha2.view.security.User', {
         'sencha2.view.security.UsersGrid',
         'sencha2.view.security.UserModel',
         'sencha2.view.security.UserController',
-        'sencha2.util.Glyphs'
+        'sencha2.view.security.UserForm',
+        'sencha2.util.Glyphs',
+        'sencha2.model.security.Group'
+
+
 
     ],
     controller: 'user',
@@ -74,6 +78,6 @@ Ext.define('sencha2.view.security.User', {
                 }
             ]
         }
-    ],
+    ]
 
 });

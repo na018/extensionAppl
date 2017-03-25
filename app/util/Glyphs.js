@@ -15,9 +15,11 @@ Ext.define('sencha2.util.Glyphs', {
     },
 
     getGlyph : function(glyph) {
+        alert('I am called');
         var me = this,
             font = me.getWebFont();
         if (typeof me.config[glyph] === 'undefined') {
+            console.log(glyph+'is not defined');
             return false;
         }
         return me.config[glyph] + '@' + font;
@@ -26,3 +28,4 @@ Ext.define('sencha2.util.Glyphs', {
         console.log('glyphs util called')
     }
 });
+console.log('glyphs called '+this);
